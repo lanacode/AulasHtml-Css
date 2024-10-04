@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+    
+</head>
+<body>
+    <div class="tela">
+        <input type="text" id="display" disabled>
+
+        <div class="numeros">
+            <button class="botao">7</button>
+            <button class="botao">8</button>
+            <button class="botao">9</button>
+            <button class="botao">+</button>
+            <button class="botao">4</button>
+            <button class="botao">5</button>
+            <button class="botao">6</button>
+            <button class="botao">-</button>
+            <button class="botao">1</button>
+            <button class="botao">2</button>
+            <button class="botao">3</button>
+            <button class="botao">*</button>
+            <button class="botao">C</button>
+            <button class="botao">0</button>
+            <button class="botao">=</button>
+            <button class="botao">/</button>
+        </div>
+        
+    </div>
+    
+    <script src="calculadora.js"></script>
+
+</body>
+</html>
+
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centraliza verticalmente na tela inteira */
+    margin: 0; /* Remove margens padrão */
+}
+
+.tela {
+    width: 500px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px; /* Reduzi o padding para evitar muito espaço */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo dentro da tela */
+    height: 400px; /* Ajusta a altura da tela */
+}
+
+#display {
+    width: 100%;
+    height: 60px; /* Aumentei a altura do display */
+    font-size: 30px; /* Aumentei o tamanho da fonte do display */
+    text-align: center;
+    color: black; /* Altera a cor do texto para preto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
+}
+
+.botao {
+    background-color: #d7eff6;
+    color: black; 
+    border: none;
+    padding: 20px; /* Aumentei o padding dos botões */
+    font-size: 24px; /* Aumentei o tamanho da fonte dos botões */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #a8dadc;
+}
+
+
+
+const display = document.getElementById ('display'); 
+const keys = document.querySelectorAll ('.botao');
+
+let currentInput = '0';
+let firstNumber = '';
+let operator = '';
+let shouldReset = false
+
+keys.forEach (key => {
+    key.addEventListener('click', () => {
+        const keyValue = key.innerText;
+
+        if (shouldReset) {
+            currentInput = '';
+            shouldReset = false
+        }
+
+        if (!isNaN(keyValue) || keyValue === '.') {
+            currentInput += keyValue;
+        } 
+        
+        else if (keyValue === 'C') {
+            currentInput = '';
+            firstNumber = ''
+            operator = '';  
+        }
+        
+        else if (keyValue === '='){
+            currentInput = eval (firstNumber + operator + currentInput);
+            shouldReset = true
+        }
+
+        else {
+            if (firstNumber === '') {
+                firstNumber = currentInput;
+                operator = keyValue
+                shouldReset = true
+            }
+        }
+
+        display.value = currentInput;
+    });
+});
