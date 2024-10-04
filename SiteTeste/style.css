@@ -1,0 +1,88 @@
+/* Estilos gerais para o corpo do documento */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #d410c4;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5em;
+}
+
+/* Estilos para a navegação */
+nav {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.menuul1 {
+    list-style-type: none;
+    padding: 0;
+    margin: 2;
+}
+
+.menuul1 .menuli1 {
+    display: inline;
+}
+
+.menuul1 .menuli1 a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #d410c4;
+}
+
+.menuul1 .menuli1 a:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para os artigos */
+article {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #000000;
+    background-color: #f9f9f9;
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #d410c4;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para a parte com imagem e texto */
+.parte1 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.parte1 .imagem {
+    max-width: 100%;
+    margin-right: 30px;
+}
+
+.parte1 .texto {
+    text-align: left;
+    flex: 5;
+}
+
+.texto ol {
+    margin-top: 2;
+}
