@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title> <!--Titulo do site-->
+    </head>
+    <body>
+        <form action="#" method="post">
+                <h1>Cadastro de pessoas</h1>
+                <div>
+                    <!--Caixinha para captar informações-->
+                    <label for="Nome">Nome:</label> <!--tipo de dado// nome que aparecerá no site-->
+                    <input type="text" id="Nome" maxlength="20"> <!--entrada de dados// tipo de dado// nome do dado-->
+                </div> <br>
+
+                <div>
+                    <!--Caixinha para captar informações-->
+                    <label for="CPF">CPF:</label> <!--tipo de dado// nome que aparecerá no site-->
+                    <input type="number" id="CPF"> <!--entrada de dados// tipo de dado// nome do dado-->
+                </div><br>
+
+                <div>
+                    <!--Caixinha para captar informações-->
+                    <label for="senha">Senha:</label> <!--tipo de dado// nome que aparecerá no site-->
+                    <input type="password" id="senha">
+                </div><br>
+
+                <div>
+                    <!--Caixinha para selecionar opções-->
+                    <label for="sala">Sala:</label> <!--tipo de dado// nome que aparecerá no site-->
+                    <select name="Selecione uma sala" id="Sala"> <!--tag de seleção// tipo de dado// nome do dado-->
+                        <option value="1">Turin</option>
+                        <option value="2">Tokio</option>
+                        <option value="3">Vancouver</option>
+                        <option value="4">Los Angeles</option>
+                    </select>
+                </div><br>
+
+                <div>
+                    <!-- Botão para selecionar ou não-->
+                    <label for="contrato">Aceito o contrato</label> <!--tipo de dado// nome que aparecerá no site-->
+                    <input type="checkbox" id="contrato"/> <!--entrada de dados// tipo de dado// nome do dado-->
+                </div><br>
+
+                <div>
+                    <!-- Tag para selecionar uma opção -->
+                    <label for="tempo">Qual o período do seu contrato:</label><br> <!--tipo de dado// nome que aparecerá no site-->
+                    6 meses: <input type="radio" name="periodo" id="6meses"><br>
+                    1 ano: <input type="radio" name="periodo" id="1ano"><br>
+                    2 anos: <input type="radio" name="periodo" id="2anos"><br>
+                </div><br>
+
+                <div>
+                    <label for="sobre">Sobre você:</label> <!--tipo de dado// nome que aparecerá no site-->
+                    <textarea name="" id="sobre" rows="4" cols="40"></textarea> <!-- Tag para caixa de texto// nome do dado// dimensões -->
+                </div><br>
+
+                <div>
+                    <input type="button" value="Clique aqui"> <!--botão click aqui-->
+                    <input type="submit" value="Salvar dados"> <!--botão para salvar e redirecionar-->
+                    <input type="reset" value="Limpar dados"> <!--botão para limpar dados-->
+                </div>
+
+        </form>
+    </body>
+</html>
