@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Site teste</title>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.icon-icons.com/icons2/3660/PNG/512/programming_tecnology_react_native_logo_icon_228457.png" alt="logomarca">
+        <div>ARTDR - Programação Full Stack</div>
+    </header>
+    <nav>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+    </nav>
+    <main>
+        <section class="noticia">
+            <img src="https://clarify.com.br/blog/wp-content/uploads/2021/09/linguagens-de-programacao.jpg" alt="">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at aut aliquid odio. Quo totam, nesciunt explicabo minus alias aspernatur possimus aliquam eos, ipsa ab laboriosam qui nulla necessitatibus. Dicta.</div>
+        </section>
+        <section class="noticia revertido">
+            <img src="https://www.itexperts.com.br/wp-content/uploads/2022/09/13140643/algoritmo.jpg" alt="">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at aut aliquid odio. Quo totam, nesciunt explicabo minus alias aspernatur possimus aliquam eos, ipsa ab laboriosam qui nulla necessitatibus. Dicta.</div>
+        </section>
+        <section class="marcadores">
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/D4D12AQEJ9cg68EBMjQ/article-cover_image-shrink_600_2000/0/1709844064928?e=2147483647&v=beta&t=zgF5Y1rWr3hmYifG5oR08sy8dvBLNd_IEZ5jfEMIFpE" alt="">
+                <div>Info</div>
+            </div>
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/D4D12AQEJ9cg68EBMjQ/article-cover_image-shrink_600_2000/0/1709844064928?e=2147483647&v=beta&t=zgF5Y1rWr3hmYifG5oR08sy8dvBLNd_IEZ5jfEMIFpE" alt="">
+                <div>Info</div>
+            </div>
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/D4D12AQEJ9cg68EBMjQ/article-cover_image-shrink_600_2000/0/1709844064928?e=2147483647&v=beta&t=zgF5Y1rWr3hmYifG5oR08sy8dvBLNd_IEZ5jfEMIFpE" alt="">
+                <div>Info</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>&copy;Programação 2024</div>
+    </footer>
+    
+</body>
+</html>
+
+
+
+body{
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    font-size: 16px;
+    background-color: #e7e7e7;
+}
+
+header{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 64px;
+}
+
+header div{
+    margin-left: 2%;
+    font-size: 2rem;
+}
+
+nav{
+background-color: #000000;
+color: white;
+text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    padding: 15px;
+    text-decoration:none;
+    color: white;
+}
+
+.noticia{
+    display: flex;
+    margin: 15px 0 px;
+    padding: 10px;
+}
+
+.revertido {
+    flex-direction: row-reverse;
+}
+.noticia img{
+    width: 450px;
+    border-radius: 10px;
+
+}
+
+.noticia div{
+    padding: 5 px 15px;
+    margin: 15px;
+}
+.marcadores{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px 0px;
+
+}
+
+.marcadores img{
+    width: 500px;
+    border-radius: 64px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img{
+    width: 128px;
+    border-radius: 64px;
+}
+
+footer{
+    background-color: white;
+    color: #000000;
+    text-align: center;
+    padding: 15px;
+}
